@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+test {
+    useJUnitPlatform()
+}
+
+
+
+task zip(type: Zip) {
+    archiveFileName = "solution.zip"
+    destinationDirectory = file("$buildDir")
+
+    from 'src/main/java/ab2/impl'
+}
+
+
+tasks.withType(JavaCompile) {
+    options.compilerArgs += ['-Xlint:none']
+}
