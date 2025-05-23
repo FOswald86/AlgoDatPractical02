@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ab2.Ab2Tests" tests="12" skipped="0" failures="1" errors="0" timestamp="2025-05-23T14:59:31" hostname="FOSWALD86TP" time="0.071">
+  <properties/>
+  <testcase name="testDeletedSizeAndCurrentSizeTracking()" classname="ab2.Ab2Tests" time="0.029"/>
+  <testcase name="testFullTableCondition()" classname="ab2.Ab2Tests" time="0.013">
+    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;9&gt; but was: &lt;8&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;9&gt; but was: &lt;8&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at app//ab2.Ab2Tests.testFullTableCondition(Ab2Tests.java:138)
+	at java.base@21.0.6/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.6/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.6/java.util.ArrayList.forEach(ArrayList.java:1596)
+</failure>
+  </testcase>
+  <testcase name="testOverwriteValue()" classname="ab2.Ab2Tests" time="0.002"/>
+  <testcase name="testInsertDeletedIsRejected()" classname="ab2.Ab2Tests" time="0.002"/>
+  <testcase name="testIsEmptyAndIsFull()" classname="ab2.Ab2Tests" time="0.007"/>
+  <testcase name="testInsertRemoveInsertSameKey()" classname="ab2.Ab2Tests" time="0.002"/>
+  <testcase name="testInsertCollisionHandling()" classname="ab2.Ab2Tests" time="0.001"/>
+  <testcase name="testStairSearchMatrixA()" classname="ab2.Ab2Tests" time="0.001"/>
+  <testcase name="testDeletedSlotsAndReuse()" classname="ab2.Ab2Tests" time="0.002"/>
+  <testcase name="testBinaryMatrixB()" classname="ab2.Ab2Tests" time="0.001"/>
+  <testcase name="testInsertAndGetSimple()" classname="ab2.Ab2Tests" time="0.001"/>
+  <testcase name="testRemoveThenInsertSameKey()" classname="ab2.Ab2Tests" time="0.001"/>
+  <system-out><![CDATA[Breakpoint: Setting size to 1
+Breakpoint: Size incremented successfully. New size: 1
+Breakpoint: Setting size to 2
+Breakpoint: Size incremented successfully. New size: 2
+Breakpoint: Setting size to 1
+Breakpoint: Size decremented successfully. New size: 1
+Breakpoint: Setting size to 1
+Breakpoint: Size incremented successfully. New size: 1
+Breakpoint: Setting size to 1
+Breakpoint: Size incremented successfully. New size: 1
+Breakpoint: Setting size to 2
+Breakpoint: Size incremented successfully. New size: 2
+Breakpoint: Setting size to 3
+Breakpoint: Size incremented successfully. New size: 3
+Breakpoint: Setting size to 4
+Breakpoint: Size incremented successfully. New size: 4
+Breakpoint: Setting size to 5
+Breakpoint: Size incremented successfully. New size: 5
+Breakpoint: Setting size to 6
+Breakpoint: Size incremented successfully. New size: 6
+Breakpoint: Setting size to 7
+Breakpoint: Size incremented successfully. New size: 7
+Breakpoint: Setting size to 8
+Breakpoint: Size incremented successfully. New size: 8
+Breakpoint: Setting size to 9
+Breakpoint: Size incremented successfully. New size: 9
+Breakpoint: Setting size to 8
+Breakpoint: Size decremented successfully. New size: 8
+Breakpoint: Setting size to 1
+Breakpoint: Size incremented successfully. New size: 1
+Breakpoint: Setting size to 9
+Breakpoint: Error incrementing size. Breakpoint: Size exceeds maximum size
+Breakpoint: Setting size to 0
+Breakpoint: Size decremented successfully. New size: 0
+Breakpoint: Setting size to 1
+Breakpoint: Size incremented successfully. New size: 1
+Breakpoint: Setting size to 1
+Breakpoint: Size incremented successfully. New size: 1
+Breakpoint: Setting size to 2
+Breakpoint: Size incremented successfully. New size: 2
+Breakpoint: Setting size to 3
+Breakpoint: Size incremented successfully. New size: 3
+Breakpoint: Setting size to 4
+Breakpoint: Size incremented successfully. New size: 4
+Breakpoint: Setting size to 5
+Breakpoint: Size incremented successfully. New size: 5
+Breakpoint: Setting size to 6
+Breakpoint: Size incremented successfully. New size: 6
+Breakpoint: Setting size to 7
+Breakpoint: Size incremented successfully. New size: 7
+Breakpoint: Setting size to 8
+Breakpoint: Size incremented successfully. New size: 8
+Breakpoint: Setting size to 9
+Breakpoint: Size incremented successfully. New size: 9
+Breakpoint: Setting size to 10
+Breakpoint: Size incremented successfully. New size: 10
+Breakpoint: Setting size to 11
+Breakpoint: Size incremented successfully. New size: 11
+Breakpoint: Setting size to 12
+Breakpoint: Size incremented successfully. New size: 12
+Breakpoint: Setting size to 13
+Breakpoint: Size incremented successfully. New size: 13
+Breakpoint: Setting size to 14
+Breakpoint: Size incremented successfully. New size: 14
+Breakpoint: Setting size to 15
+Breakpoint: Size incremented successfully. New size: 15
+Breakpoint: Setting size to 16
+Breakpoint: Size incremented successfully. New size: 16
+Breakpoint: Setting size to 17
+Breakpoint: Size incremented successfully. New size: 17
+Breakpoint: Setting size to 18
+Breakpoint: Size incremented successfully. New size: 18
+Breakpoint: Setting size to 19
+Breakpoint: Size incremented successfully. New size: 19
+Breakpoint: Setting size to 20
+Breakpoint: Size incremented successfully. New size: 20
+Breakpoint: Setting size to 21
+Breakpoint: Size incremented successfully. New size: 21
+Breakpoint: Setting size to 22
+Breakpoint: Size incremented successfully. New size: 22
+Breakpoint: Setting size to 23
+Breakpoint: Size incremented successfully. New size: 23
+Breakpoint: Setting size to 24
+Breakpoint: Size incremented successfully. New size: 24
+Breakpoint: Setting size to 25
+Breakpoint: Size incremented successfully. New size: 25
+Breakpoint: Setting size to 26
+Breakpoint: Size incremented successfully. New size: 26
+Breakpoint: Setting size to 27
+Breakpoint: Size incremented successfully. New size: 27
+Breakpoint: Setting size to 28
+Breakpoint: Size incremented successfully. New size: 28
+Breakpoint: Setting size to 29
+Breakpoint: Size incremented successfully. New size: 29
+Breakpoint: Setting size to 30
+Breakpoint: Size incremented successfully. New size: 30
+Breakpoint: Setting size to 31
+Breakpoint: Size incremented successfully. New size: 31
+Breakpoint: Setting size to 32
+Breakpoint: Size incremented successfully. New size: 32
+Breakpoint: Setting size to 33
+Breakpoint: Size incremented successfully. New size: 33
+Breakpoint: Setting size to 34
+Breakpoint: Size incremented successfully. New size: 34
+Breakpoint: Setting size to 35
+Breakpoint: Size incremented successfully. New size: 35
+Breakpoint: Setting size to 36
+Breakpoint: Size incremented successfully. New size: 36
+Breakpoint: Setting size to 37
+Breakpoint: Size incremented successfully. New size: 37
+Breakpoint: Setting size to 38
+Breakpoint: Size incremented successfully. New size: 38
+Breakpoint: Setting size to 39
+Breakpoint: Size incremented successfully. New size: 39
+Breakpoint: Setting size to 40
+Breakpoint: Size incremented successfully. New size: 40
+Breakpoint: Setting size to 41
+Breakpoint: Size incremented successfully. New size: 41
+Breakpoint: Setting size to 42
+Breakpoint: Size incremented successfully. New size: 42
+Breakpoint: Setting size to 43
+Breakpoint: Size incremented successfully. New size: 43
+Breakpoint: Setting size to 44
+Breakpoint: Size incremented successfully. New size: 44
+Breakpoint: Setting size to 45
+Breakpoint: Size incremented successfully. New size: 45
+Breakpoint: Setting size to 46
+Breakpoint: Size incremented successfully. New size: 46
+Breakpoint: Setting size to 47
+Breakpoint: Size incremented successfully. New size: 47
+Breakpoint: Setting size to 48
+Breakpoint: Size incremented successfully. New size: 48
+Breakpoint: Setting size to 49
+Breakpoint: Size incremented successfully. New size: 49
+Breakpoint: Setting size to 1
+Breakpoint: Size incremented successfully. New size: 1
+Breakpoint: Setting size to 0
+Breakpoint: Size decremented successfully. New size: 0
+Breakpoint: Setting size to 1
+Breakpoint: Size incremented successfully. New size: 1
+Breakpoint: Setting size to 1
+Breakpoint: Size incremented successfully. New size: 1
+Breakpoint: Setting size to 0
+Breakpoint: Size decremented successfully. New size: 0
+Breakpoint: Setting size to 1
+Breakpoint: Size incremented successfully. New size: 1
+Breakpoint: Setting size to 2
+Breakpoint: Size incremented successfully. New size: 2
+Breakpoint: Setting size to 1
+Breakpoint: Size incremented successfully. New size: 1
+Breakpoint: Setting size to 2
+Breakpoint: Size incremented successfully. New size: 2
+Breakpoint: Setting size to 3
+Breakpoint: Size incremented successfully. New size: 3
+Breakpoint: Setting size to 2
+Breakpoint: Size decremented successfully. New size: 2
+Breakpoint: Setting size to 1
+Breakpoint: Size incremented successfully. New size: 1
+Breakpoint: Setting size to 1
+Breakpoint: Size decremented successfully. New size: 1
+Breakpoint: Setting size to 2
+Breakpoint: Size incremented successfully. New size: 2
+Breakpoint: Setting size to 2
+Breakpoint: Size incremented successfully. New size: 2
+Breakpoint: Setting size to 3
+Breakpoint: Size incremented successfully. New size: 3
+Breakpoint: Setting size to 1
+Breakpoint: Size incremented successfully. New size: 1
+Breakpoint: Setting size to 1
+Breakpoint: Size incremented successfully. New size: 1
+Breakpoint: Setting size to 0
+Breakpoint: Size decremented successfully. New size: 0
+Breakpoint: Setting size to 1
+Breakpoint: Size incremented successfully. New size: 1
+Breakpoint: Setting size to 1
+Breakpoint: Size incremented successfully. New size: 1
+Breakpoint: Setting size to 0
+Breakpoint: Size decremented successfully. New size: 0
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
