@@ -46,6 +46,7 @@ public abstract class AbstractCustomProbingHashTable {
 	 * @return keys; 
 	 */
 	public Integer[] getKeys() {
+		System.out.println("getKeys");
 		return keys;
 	}
 	
@@ -55,6 +56,7 @@ public abstract class AbstractCustomProbingHashTable {
 	 * @return keys; 
 	 */
 	public String[] getVals() {
+		System.out.println("getVals");
 		return vals;
 	}
 
@@ -66,6 +68,7 @@ public abstract class AbstractCustomProbingHashTable {
 	 * It initializes the private key and values (vals) arrays of adequate size.
 	 */
 	public AbstractCustomProbingHashTable(int capacity) {
+		System.out.println("Constructor: AbstractCustomProbingHashTable");
 		this.currentSize = 0;
 		this.deletedSize = 0;
 		this.maxSize = capacity;
@@ -80,6 +83,7 @@ public abstract class AbstractCustomProbingHashTable {
 	 * currentSize) to zero.
 	 */
 	public void makeEmpty() {
+		System.out.println("makeEmpty");
 		this.currentSize = 0;
 		this.deletedSize = 0;
 		this.keys = new Integer[maxSize];
@@ -94,6 +98,7 @@ public abstract class AbstractCustomProbingHashTable {
 	 * @return this.currentSize
 	 */
 	public int getCurrentSize() {
+		System.out.println("getCurrentSize");
 		return this.currentSize;
 	}
 	
@@ -103,6 +108,7 @@ public abstract class AbstractCustomProbingHashTable {
 	 * @return this.deletedSize
 	 */
 	public int getDeletedSize() {
+		System.out.println("getDeletedSize");
 		return this.deletedSize;
 	}
 	/**
@@ -114,32 +120,32 @@ public abstract class AbstractCustomProbingHashTable {
 	 * @throws IllegalStateException if size is negative or exceeds maximum size
 	 */
 	public int setCurrentSize(int size) {
-	    System.out.println("Breakpoint: Setting size to " + size);
+	    System.out.println("setCurrentSize, Breakpoint: Setting size to " + size);
 	    if (size < 0) {
-	        //System.out.println("Breakpoint: Size cannot be negative");
+	        System.out.println("setCurrentSize, Breakpoint: Size cannot be negative");
 	        throw new IllegalStateException("Breakpoint: Size cannot be negative");
 	    }
 	    if (size + this.getDeletedSize() > this.getMaxSize()) {
-	        //System.out.println("Breakpoint: Size exceeds maximum size");
+	        System.out.println("Breakpoint: Size exceeds maximum size");
 	        throw new IllegalStateException("Breakpoint: Size exceeds maximum size");
 	    }
 	    this.currentSize = size;
-	    //System.out.println("Breakpoint: Size set successfully. New size: " + this.currentSize);
+	    System.out.println("Breakpoint: Size set successfully. New size: " + this.currentSize);
 	    return this.currentSize;
 	}
 	
 	public int setDeletedSize(int size) {
 	    System.out.println("Breakpoint: Setting size to " + size);
 	    if (size < 0) {
-	        //System.out.println("Breakpoint: Size cannot be negative");
+	        System.out.println("Breakpoint: Size cannot be negative");
 	        throw new IllegalStateException("Breakpoint: Size cannot be negative");
 	    }
 	    if (size + this.getCurrentSize() > this.getMaxSize()) {
-	        //System.out.println("Breakpoint: Size exceeds maximum size");
+	        System.out.println("Breakpoint: Size exceeds maximum size");
 	        throw new IllegalStateException("Breakpoint: Size exceeds maximum size");
 	    }
 	    this.deletedSize = size;
-	    //System.out.println("Breakpoint: Size set successfully. New size: " + this.currentSize);
+	    System.out.println("Breakpoint: Size set successfully. New size: " + this.currentSize);
 	    return this.deletedSize;
 	}
 

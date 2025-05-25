@@ -1,38 +1,530 @@
-Breakpoint: Setting size to 1
-8Breakpoint: Size decremented successfully. New size: 1
-Breakpoint: Setting size to 1
+-Constructor: AbstractCustomProbingHashTable
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 1
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 1
 8Breakpoint: Size incremented successfully. New size: 1
-Breakpoint: Setting size to 8
-8Breakpoint: Size decremented successfully. New size: 8
-Breakpoint: Setting size to 1
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 2
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 2
+8Breakpoint: Size incremented successfully. New size: 2
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 1
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 1
+8Breakpoint: Size decremented successfully. New size: 1
+getDeletedSize
+Breakpoint: Setting size to 1
+getCurrentSize
+0Breakpoint: Size set successfully. New size: 1
+8Breakpoint: Size incremented successfully. New size: 1
+getCurrentSize
+getDeletedSize
+-Constructor: AbstractCustomProbingHashTable
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 1
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 1
 8Breakpoint: Size incremented successfully. New size: 1
-CurrentSize before: 8
-DeletedSize before: 1
-Breakpoint: Setting size to 0
-8Breakpoint: Size decremented successfully. New size: 0
-Breakpoint: Setting size to 1
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 2
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 2
+8Breakpoint: Size incremented successfully. New size: 2
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 3
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 3
+8Breakpoint: Size incremented successfully. New size: 3
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 4
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 4
+8Breakpoint: Size incremented successfully. New size: 4
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 5
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 5
+8Breakpoint: Size incremented successfully. New size: 5
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 6
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 6
+8Breakpoint: Size incremented successfully. New size: 6
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 7
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 7
+8Breakpoint: Size incremented successfully. New size: 7
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 8
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 8
+8Breakpoint: Size incremented successfully. New size: 8
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 9
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 9
+8Breakpoint: Size incremented successfully. New size: 9
+getCurrentSize
+getDeletedSize
+getCurrentSize
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 8
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 8
+8Breakpoint: Size decremented successfully. New size: 8
+getDeletedSize
+Breakpoint: Setting size to 1
+getCurrentSize
+0Breakpoint: Size set successfully. New size: 8
+8Breakpoint: Size incremented successfully. New size: 1
+getCurrentSize
+getDeletedSize
+getDeletedSize
+Breakpoint: Setting size to 0
+getCurrentSize
+0Breakpoint: Size set successfully. New size: 8
+8Breakpoint: Size decremented successfully. New size: 0
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 9
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 9
+8Breakpoint: Size incremented successfully. New size: 9
+getCurrentSize
+getDeletedSize
+-Constructor: AbstractCustomProbingHashTable
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 1
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 1
+8Breakpoint: Size incremented successfully. New size: 1
+-Constructor: AbstractCustomProbingHashTable
+-Constructor: AbstractCustomProbingHashTable
+getCurrentSize
+getDeletedSize
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 1
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 1
+8Breakpoint: Size incremented successfully. New size: 1
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 2
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 2
+8Breakpoint: Size incremented successfully. New size: 2
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 3
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 3
+8Breakpoint: Size incremented successfully. New size: 3
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 4
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 4
+8Breakpoint: Size incremented successfully. New size: 4
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 5
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 5
+8Breakpoint: Size incremented successfully. New size: 5
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 6
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 6
+8Breakpoint: Size incremented successfully. New size: 6
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 7
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 7
+8Breakpoint: Size incremented successfully. New size: 7
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 8
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 8
+8Breakpoint: Size incremented successfully. New size: 8
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 9
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 9
+8Breakpoint: Size incremented successfully. New size: 9
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 10
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 10
+9Breakpoint: Size incremented successfully. New size: 10
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 11
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 11
+9Breakpoint: Size incremented successfully. New size: 11
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 12
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 12
+9Breakpoint: Size incremented successfully. New size: 12
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 13
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 13
+9Breakpoint: Size incremented successfully. New size: 13
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 14
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 14
+9Breakpoint: Size incremented successfully. New size: 14
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 15
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 15
+9Breakpoint: Size incremented successfully. New size: 15
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 16
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 16
+9Breakpoint: Size incremented successfully. New size: 16
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 17
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 17
+9Breakpoint: Size incremented successfully. New size: 17
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 18
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 18
+9Breakpoint: Size incremented successfully. New size: 18
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 19
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 19
+9Breakpoint: Size incremented successfully. New size: 19
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 20
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 20
+9Breakpoint: Size incremented successfully. New size: 20
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 21
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 21
+9Breakpoint: Size incremented successfully. New size: 21
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 22
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 22
+9Breakpoint: Size incremented successfully. New size: 22
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 23
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 23
+9Breakpoint: Size incremented successfully. New size: 23
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 24
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 24
+9Breakpoint: Size incremented successfully. New size: 24
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 25
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 25
+9Breakpoint: Size incremented successfully. New size: 25
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 26
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 26
+9Breakpoint: Size incremented successfully. New size: 26
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 27
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 27
+9Breakpoint: Size incremented successfully. New size: 27
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 28
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 28
+9Breakpoint: Size incremented successfully. New size: 28
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 29
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 29
+9Breakpoint: Size incremented successfully. New size: 29
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 30
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 30
+9Breakpoint: Size incremented successfully. New size: 30
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 31
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 31
+9Breakpoint: Size incremented successfully. New size: 31
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 32
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 32
+9Breakpoint: Size incremented successfully. New size: 32
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 33
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 33
+9Breakpoint: Size incremented successfully. New size: 33
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 34
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 34
+9Breakpoint: Size incremented successfully. New size: 34
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 35
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 35
+9Breakpoint: Size incremented successfully. New size: 35
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 36
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 36
+9Breakpoint: Size incremented successfully. New size: 36
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 37
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 37
+9Breakpoint: Size incremented successfully. New size: 37
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 38
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 38
+9Breakpoint: Size incremented successfully. New size: 38
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 39
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 39
+9Breakpoint: Size incremented successfully. New size: 39
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 40
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 40
+9Breakpoint: Size incremented successfully. New size: 40
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 41
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 41
+9Breakpoint: Size incremented successfully. New size: 41
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 42
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 42
+9Breakpoint: Size incremented successfully. New size: 42
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 43
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 43
+9Breakpoint: Size incremented successfully. New size: 43
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 44
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 44
+9Breakpoint: Size incremented successfully. New size: 44
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 45
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 45
+9Breakpoint: Size incremented successfully. New size: 45
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 46
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 46
+9Breakpoint: Size incremented successfully. New size: 46
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 47
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 47
+9Breakpoint: Size incremented successfully. New size: 47
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 48
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 48
+9Breakpoint: Size incremented successfully. New size: 48
+getCurrentSize
+0setCurrentSize, Breakpoint: Setting size to 49
+getDeletedSize
+1Breakpoint: Size set successfully. New size: 49
+9Breakpoint: Size incremented successfully. New size: 49
+getCurrentSize
+getDeletedSize
+-Constructor: AbstractCustomProbingHashTable
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 1
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 1
 8Breakpoint: Size incremented successfully. New size: 1
-Breakpoint: Setting size to 0
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 0
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 0
 8Breakpoint: Size decremented successfully. New size: 0
+getDeletedSize
+Breakpoint: Setting size to 1
+getCurrentSize
+0Breakpoint: Size set successfully. New size: 0
+8Breakpoint: Size incremented successfully. New size: 1
+getDeletedSize
+Breakpoint: Setting size to 0
+getCurrentSize
+0Breakpoint: Size set successfully. New size: 0
+8Breakpoint: Size decremented successfully. New size: 0
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 1
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 1
+8Breakpoint: Size incremented successfully. New size: 1
+getCurrentSize
+getDeletedSize
+-Constructor: AbstractCustomProbingHashTable
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 1
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 1
+8Breakpoint: Size incremented successfully. New size: 1
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 2
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 2
+8Breakpoint: Size incremented successfully. New size: 2
+	-Constructor: AbstractCustomProbingHashTable
 
-Breakpoint: Setting size to 2
+-Constructor: AbstractCustomProbingHashTable
 
-8Breakpoint: Size decremented successfully. New size: 2
+getCurrentSize
 
-Breakpoint: Setting size to 1
+/setCurrentSize, Breakpoint: Setting size to 1
+
+getDeletedSize
+
+0Breakpoint: Size set successfully. New size: 1
 
 8Breakpoint: Size incremented successfully. New size: 1
 
+getCurrentSize
+
+/setCurrentSize, Breakpoint: Setting size to 2
+
+getDeletedSize
+
+0Breakpoint: Size set successfully. New size: 2
+
+8Breakpoint: Size incremented successfully. New size: 2
+
+getCurrentSize
+
+/setCurrentSize, Breakpoint: Setting size to 3
+
+getDeletedSize
+
+0Breakpoint: Size set successfully. New size: 3
+
+8Breakpoint: Size incremented successfully. New size: 3
+
+getCurrentSize
+
+getDeletedSize
+
+getCurrentSize
+
+/setCurrentSize, Breakpoint: Setting size to 2
+
+getDeletedSize
+
+0Breakpoint: Size set successfully. New size: 2
+
+8Breakpoint: Size decremented successfully. New size: 2
+
+getDeletedSize
+
 Breakpoint: Setting size to 1
+
+getCurrentSize
+
+0Breakpoint: Size set successfully. New size: 2
+
+8Breakpoint: Size incremented successfully. New size: 1
+
+getCurrentSize
+
+/setCurrentSize, Breakpoint: Setting size to 1
+
+getDeletedSize
+
+0Breakpoint: Size set successfully. New size: 1
 
 8Breakpoint: Size decremented successfully. New size: 1
 
+getDeletedSize
+
 Breakpoint: Setting size to 2
 
+getCurrentSize
+
+0Breakpoint: Size set successfully. New size: 1
+
 8Breakpoint: Size incremented successfully. New size: 2
-Breakpoint: Setting size to 0
-8Breakpoint: Size decremented successfully. New size: 0
-Breakpoint: Setting size to 1
+
+getCurrentSize
+
+getDeletedSize
+
+getCurrentSize
+
+/setCurrentSize, Breakpoint: Setting size to 2
+
+getDeletedSize
+
+0Breakpoint: Size set successfully. New size: 2
+
+8Breakpoint: Size incremented successfully. New size: 2
+
+getCurrentSize
+
+/setCurrentSize, Breakpoint: Setting size to 3
+
+getDeletedSize
+
+0Breakpoint: Size set successfully. New size: 3
+
+8Breakpoint: Size incremented successfully. New size: 3
+
+getCurrentSize
+
+getDeletedSize
+-Constructor: AbstractCustomProbingHashTable
+-Constructor: AbstractCustomProbingHashTable
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 1
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 1
+8Breakpoint: Size incremented successfully. New size: 1
+-Constructor: AbstractCustomProbingHashTable
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 1
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 1
 8Breakpoint: Size incremented successfully. New size: 1
-Breakpoint: Setting size to 0
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 0
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 0
 8Breakpoint: Size decremented successfully. New size: 0
+getDeletedSize
+Breakpoint: Setting size to 1
+getCurrentSize
+0Breakpoint: Size set successfully. New size: 0
+8Breakpoint: Size incremented successfully. New size: 1
+getDeletedSize
+Breakpoint: Setting size to 0
+getCurrentSize
+0Breakpoint: Size set successfully. New size: 0
+8Breakpoint: Size decremented successfully. New size: 0
+getCurrentSize
+/setCurrentSize, Breakpoint: Setting size to 1
+getDeletedSize
+0Breakpoint: Size set successfully. New size: 1
+8Breakpoint: Size incremented successfully. New size: 1
