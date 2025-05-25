@@ -1,4 +1,4 @@
-package ab2.impl.Nachnamen;
+package ab2.impl.KassikLaferOswald;
 
 import ab2.AbstractCustomProbingHashTable;
 import ab2.IMatrixSearch;

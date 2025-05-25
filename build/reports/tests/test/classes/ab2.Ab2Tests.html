@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.093s</div>
+<div class="counter">0.043s</div>
 <p>duration</p>
 </div>
 </td>
@@ -84,57 +84,57 @@
 </tr>
 <tr>
 <td class="success">testDeletedSizeAndCurrentSizeTracking()</td>
-<td class="success">0.031s</td>
+<td class="success">0.022s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testDeletedSlotsAndReuse()</td>
-<td class="success">0.003s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testFullTableCondition()</td>
-<td class="success">0.011s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testInsertAndGetSimple()</td>
-<td class="success">0.002s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testInsertCollisionHandling()</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testInsertDeletedIsRejected()</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testInsertRemoveInsertSameKey()</td>
-<td class="success">0.007s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testIsEmptyAndIsFull()</td>
-<td class="success">0.025s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testOverwriteValue()</td>
-<td class="success">0.004s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testRemoveThenInsertSameKey()</td>
 <td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">testStairSearchMatrixA()</td>
+<td class="success">testIsEmptyAndIsFull()</td>
 <td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testOverwriteValue()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testRemoveThenInsertSameKey()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testStairSearchMatrixA()</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -143,16 +143,6 @@
 <h2>Standard output</h2>
 <span class="code">
 <pre>Constructor: AbstractCustomProbingHashTable
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 1
-getDeletedSize
-Breakpoint: Size set successfully. New size: 1
-Breakpoint: Size incremented successfully. New size: 1
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 2
-getDeletedSize
-Breakpoint: Size set successfully. New size: 2
-Breakpoint: Size incremented successfully. New size: 2
 getCurrentSize
 setCurrentSize, Breakpoint: Setting size to 1
 getDeletedSize
@@ -166,51 +156,6 @@ Breakpoint: Size incremented successfully. New size: 1
 getCurrentSize
 getDeletedSize
 Constructor: AbstractCustomProbingHashTable
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 1
-getDeletedSize
-Breakpoint: Size set successfully. New size: 1
-Breakpoint: Size incremented successfully. New size: 1
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 2
-getDeletedSize
-Breakpoint: Size set successfully. New size: 2
-Breakpoint: Size incremented successfully. New size: 2
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 3
-getDeletedSize
-Breakpoint: Size set successfully. New size: 3
-Breakpoint: Size incremented successfully. New size: 3
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 4
-getDeletedSize
-Breakpoint: Size set successfully. New size: 4
-Breakpoint: Size incremented successfully. New size: 4
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 5
-getDeletedSize
-Breakpoint: Size set successfully. New size: 5
-Breakpoint: Size incremented successfully. New size: 5
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 6
-getDeletedSize
-Breakpoint: Size set successfully. New size: 6
-Breakpoint: Size incremented successfully. New size: 6
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 7
-getDeletedSize
-Breakpoint: Size set successfully. New size: 7
-Breakpoint: Size incremented successfully. New size: 7
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 8
-getDeletedSize
-Breakpoint: Size set successfully. New size: 8
-Breakpoint: Size incremented successfully. New size: 8
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 9
-getDeletedSize
-Breakpoint: Size set successfully. New size: 9
-Breakpoint: Size incremented successfully. New size: 9
 getCurrentSize
 getDeletedSize
 getCurrentSize
@@ -226,281 +171,30 @@ Breakpoint: Size set successfully. New size: 8
 Breakpoint: Size incremented successfully. New size: 1
 getCurrentSize
 getDeletedSize
+getCurrentSize
+CurrentSize before: 8
+getDeletedSize
+DeletedSize before: 1
 getDeletedSize
 Breakpoint: Setting size to 0
 getCurrentSize
 Breakpoint: Size set successfully. New size: 8
 Breakpoint: Size decremented successfully. New size: 0
 getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 9
+CurrentSize after: 9
 getDeletedSize
-Breakpoint: Size set successfully. New size: 9
-Breakpoint: Size incremented successfully. New size: 9
+DeletedSize after: 0
+Wert für key 4: X
 getCurrentSize
 getDeletedSize
 Constructor: AbstractCustomProbingHashTable
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 1
-getDeletedSize
-Breakpoint: Size set successfully. New size: 1
-Breakpoint: Size incremented successfully. New size: 1
 Constructor: AbstractCustomProbingHashTable
 Constructor: AbstractCustomProbingHashTable
 getCurrentSize
 getDeletedSize
 getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 1
-getDeletedSize
-Breakpoint: Size set successfully. New size: 1
-Breakpoint: Size incremented successfully. New size: 1
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 2
-getDeletedSize
-Breakpoint: Size set successfully. New size: 2
-Breakpoint: Size incremented successfully. New size: 2
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 3
-getDeletedSize
-Breakpoint: Size set successfully. New size: 3
-Breakpoint: Size incremented successfully. New size: 3
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 4
-getDeletedSize
-Breakpoint: Size set successfully. New size: 4
-Breakpoint: Size incremented successfully. New size: 4
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 5
-getDeletedSize
-Breakpoint: Size set successfully. New size: 5
-Breakpoint: Size incremented successfully. New size: 5
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 6
-getDeletedSize
-Breakpoint: Size set successfully. New size: 6
-Breakpoint: Size incremented successfully. New size: 6
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 7
-getDeletedSize
-Breakpoint: Size set successfully. New size: 7
-Breakpoint: Size incremented successfully. New size: 7
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 8
-getDeletedSize
-Breakpoint: Size set successfully. New size: 8
-Breakpoint: Size incremented successfully. New size: 8
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 9
-getDeletedSize
-Breakpoint: Size set successfully. New size: 9
-Breakpoint: Size incremented successfully. New size: 9
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 10
-getDeletedSize
-Breakpoint: Size set successfully. New size: 10
-Breakpoint: Size incremented successfully. New size: 10
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 11
-getDeletedSize
-Breakpoint: Size set successfully. New size: 11
-Breakpoint: Size incremented successfully. New size: 11
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 12
-getDeletedSize
-Breakpoint: Size set successfully. New size: 12
-Breakpoint: Size incremented successfully. New size: 12
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 13
-getDeletedSize
-Breakpoint: Size set successfully. New size: 13
-Breakpoint: Size incremented successfully. New size: 13
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 14
-getDeletedSize
-Breakpoint: Size set successfully. New size: 14
-Breakpoint: Size incremented successfully. New size: 14
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 15
-getDeletedSize
-Breakpoint: Size set successfully. New size: 15
-Breakpoint: Size incremented successfully. New size: 15
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 16
-getDeletedSize
-Breakpoint: Size set successfully. New size: 16
-Breakpoint: Size incremented successfully. New size: 16
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 17
-getDeletedSize
-Breakpoint: Size set successfully. New size: 17
-Breakpoint: Size incremented successfully. New size: 17
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 18
-getDeletedSize
-Breakpoint: Size set successfully. New size: 18
-Breakpoint: Size incremented successfully. New size: 18
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 19
-getDeletedSize
-Breakpoint: Size set successfully. New size: 19
-Breakpoint: Size incremented successfully. New size: 19
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 20
-getDeletedSize
-Breakpoint: Size set successfully. New size: 20
-Breakpoint: Size incremented successfully. New size: 20
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 21
-getDeletedSize
-Breakpoint: Size set successfully. New size: 21
-Breakpoint: Size incremented successfully. New size: 21
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 22
-getDeletedSize
-Breakpoint: Size set successfully. New size: 22
-Breakpoint: Size incremented successfully. New size: 22
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 23
-getDeletedSize
-Breakpoint: Size set successfully. New size: 23
-Breakpoint: Size incremented successfully. New size: 23
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 24
-getDeletedSize
-Breakpoint: Size set successfully. New size: 24
-Breakpoint: Size incremented successfully. New size: 24
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 25
-getDeletedSize
-Breakpoint: Size set successfully. New size: 25
-Breakpoint: Size incremented successfully. New size: 25
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 26
-getDeletedSize
-Breakpoint: Size set successfully. New size: 26
-Breakpoint: Size incremented successfully. New size: 26
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 27
-getDeletedSize
-Breakpoint: Size set successfully. New size: 27
-Breakpoint: Size incremented successfully. New size: 27
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 28
-getDeletedSize
-Breakpoint: Size set successfully. New size: 28
-Breakpoint: Size incremented successfully. New size: 28
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 29
-getDeletedSize
-Breakpoint: Size set successfully. New size: 29
-Breakpoint: Size incremented successfully. New size: 29
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 30
-getDeletedSize
-Breakpoint: Size set successfully. New size: 30
-Breakpoint: Size incremented successfully. New size: 30
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 31
-getDeletedSize
-Breakpoint: Size set successfully. New size: 31
-Breakpoint: Size incremented successfully. New size: 31
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 32
-getDeletedSize
-Breakpoint: Size set successfully. New size: 32
-Breakpoint: Size incremented successfully. New size: 32
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 33
-getDeletedSize
-Breakpoint: Size set successfully. New size: 33
-Breakpoint: Size incremented successfully. New size: 33
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 34
-getDeletedSize
-Breakpoint: Size set successfully. New size: 34
-Breakpoint: Size incremented successfully. New size: 34
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 35
-getDeletedSize
-Breakpoint: Size set successfully. New size: 35
-Breakpoint: Size incremented successfully. New size: 35
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 36
-getDeletedSize
-Breakpoint: Size set successfully. New size: 36
-Breakpoint: Size incremented successfully. New size: 36
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 37
-getDeletedSize
-Breakpoint: Size set successfully. New size: 37
-Breakpoint: Size incremented successfully. New size: 37
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 38
-getDeletedSize
-Breakpoint: Size set successfully. New size: 38
-Breakpoint: Size incremented successfully. New size: 38
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 39
-getDeletedSize
-Breakpoint: Size set successfully. New size: 39
-Breakpoint: Size incremented successfully. New size: 39
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 40
-getDeletedSize
-Breakpoint: Size set successfully. New size: 40
-Breakpoint: Size incremented successfully. New size: 40
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 41
-getDeletedSize
-Breakpoint: Size set successfully. New size: 41
-Breakpoint: Size incremented successfully. New size: 41
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 42
-getDeletedSize
-Breakpoint: Size set successfully. New size: 42
-Breakpoint: Size incremented successfully. New size: 42
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 43
-getDeletedSize
-Breakpoint: Size set successfully. New size: 43
-Breakpoint: Size incremented successfully. New size: 43
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 44
-getDeletedSize
-Breakpoint: Size set successfully. New size: 44
-Breakpoint: Size incremented successfully. New size: 44
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 45
-getDeletedSize
-Breakpoint: Size set successfully. New size: 45
-Breakpoint: Size incremented successfully. New size: 45
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 46
-getDeletedSize
-Breakpoint: Size set successfully. New size: 46
-Breakpoint: Size incremented successfully. New size: 46
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 47
-getDeletedSize
-Breakpoint: Size set successfully. New size: 47
-Breakpoint: Size incremented successfully. New size: 47
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 48
-getDeletedSize
-Breakpoint: Size set successfully. New size: 48
-Breakpoint: Size incremented successfully. New size: 48
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 49
-getDeletedSize
-Breakpoint: Size set successfully. New size: 49
-Breakpoint: Size incremented successfully. New size: 49
-getCurrentSize
 getDeletedSize
 Constructor: AbstractCustomProbingHashTable
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 1
-getDeletedSize
-Breakpoint: Size set successfully. New size: 1
-Breakpoint: Size incremented successfully. New size: 1
 getCurrentSize
 setCurrentSize, Breakpoint: Setting size to 0
 getDeletedSize
@@ -517,40 +211,10 @@ getCurrentSize
 Breakpoint: Size set successfully. New size: 0
 Breakpoint: Size decremented successfully. New size: 0
 getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 1
-getDeletedSize
-Breakpoint: Size set successfully. New size: 1
-Breakpoint: Size incremented successfully. New size: 1
-getCurrentSize
 getDeletedSize
 Constructor: AbstractCustomProbingHashTable
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 1
-getDeletedSize
-Breakpoint: Size set successfully. New size: 1
-Breakpoint: Size incremented successfully. New size: 1
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 2
-getDeletedSize
-Breakpoint: Size set successfully. New size: 2
-Breakpoint: Size incremented successfully. New size: 2
 Constructor: AbstractCustomProbingHashTable
 Constructor: AbstractCustomProbingHashTable
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 1
-getDeletedSize
-Breakpoint: Size set successfully. New size: 1
-Breakpoint: Size incremented successfully. New size: 1
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 2
-getDeletedSize
-Breakpoint: Size set successfully. New size: 2
-Breakpoint: Size incremented successfully. New size: 2
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 3
-getDeletedSize
-Breakpoint: Size set successfully. New size: 3
-Breakpoint: Size incremented successfully. New size: 3
 getCurrentSize
 getDeletedSize
 getCurrentSize
@@ -576,30 +240,10 @@ Breakpoint: Size incremented successfully. New size: 2
 getCurrentSize
 getDeletedSize
 getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 2
-getDeletedSize
-Breakpoint: Size set successfully. New size: 2
-Breakpoint: Size incremented successfully. New size: 2
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 3
-getDeletedSize
-Breakpoint: Size set successfully. New size: 3
-Breakpoint: Size incremented successfully. New size: 3
-getCurrentSize
 getDeletedSize
 Constructor: AbstractCustomProbingHashTable
 Constructor: AbstractCustomProbingHashTable
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 1
-getDeletedSize
-Breakpoint: Size set successfully. New size: 1
-Breakpoint: Size incremented successfully. New size: 1
 Constructor: AbstractCustomProbingHashTable
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 1
-getDeletedSize
-Breakpoint: Size set successfully. New size: 1
-Breakpoint: Size incremented successfully. New size: 1
 getCurrentSize
 setCurrentSize, Breakpoint: Setting size to 0
 getDeletedSize
@@ -615,11 +259,6 @@ Breakpoint: Setting size to 0
 getCurrentSize
 Breakpoint: Size set successfully. New size: 0
 Breakpoint: Size decremented successfully. New size: 0
-getCurrentSize
-setCurrentSize, Breakpoint: Setting size to 1
-getDeletedSize
-Breakpoint: Size set successfully. New size: 1
-Breakpoint: Size incremented successfully. New size: 1
 </pre>
 </span>
 </div>
@@ -631,7 +270,7 @@ Breakpoint: Size incremented successfully. New size: 1
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.7</a> at 25.05.2025, 15:53:44</p>
+<a href="http://www.gradle.org">Gradle 8.7</a> at 25.05.2025, 16:03:36</p>
 </div>
 </div>
 </body>

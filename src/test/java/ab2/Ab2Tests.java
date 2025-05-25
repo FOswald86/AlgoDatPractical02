@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-import ab2.impl.Nachnamen.Ab2Impl;
+import ab2.impl.KassikLaferOswald.Ab2Impl;
 
 
 public class Ab2Tests {
