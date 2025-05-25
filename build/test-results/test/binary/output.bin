@@ -8,11 +8,6 @@
 8Breakpoint: Size incremented successfully. New size: 1
 CurrentSize before: 8
 DeletedSize before: 1
-Breakpoint: Setting size to 0
-8Breakpoint: Size decremented successfully. New size: 0
-CurrentSize after: 9
-DeletedSize after: 0
-Wert fÃ¼r key 4: X
 Breakpoint: Setting size to 0
 8Breakpoint: Size decremented successfully. New size: 0
 Breakpoint: Setting size to 1

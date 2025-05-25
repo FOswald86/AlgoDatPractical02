@@ -219,9 +219,8 @@ public abstract class AbstractCustomProbingHashTable {
 	 * key-value pair). 
 	 */
 	protected void incrementCurrentSize() {
-		// Prüft, ob über die maximale Anzahl aktiver Elemente hinausgegangen wird
-		if (this.currentSize >= this.maxSize) {
-			throw new IllegalStateException("Current size already at maximum capacity.");
+		if (this.currentSize + this.deletedSize >= this.maxSize) {
+			throw new IllegalStateException("Size exceeds maximum size");
 		}
 		this.currentSize++;
 	}

@@ -26,87 +26,74 @@ public class Ab2Impl extends AbstractCustomProbingHashTable implements IMatrixSe
 			throw new IllegalArgumentException("Cannot insert a value of 'deleted' as it is a reserved value for marking deleted slots.");
 		}
 
-		// Die Prüfung am Anfang muss angepasst werden, um die "deleted" Slots zu berücksichtigen
-		// Wenn die aktuelle Größe + die Anzahl der gelöschten Slots bereits die Maximalkapazität erreicht haben
-		// UND wir keinen gelöschten Slot wiederverwenden können, dann ist die Tabelle wirklich voll für einen neuen Eintrag.
-		// Aber wenn wir einen deleted slot wiederverwenden, bleibt die Summe gleich!
-		// Daher ist diese Initialprüfung schwierig, wenn die Basisklasse übermäßig restriktiv ist.
-
 		int p = (int) Math.sqrt(getMaxSize());
 		int n = getMaxSize();
 		int initialHash = hash(key);
 
-		int firstDeletedIdx = -1;
+		int firstDeletedIdx = -1; // Speichert den Index des ersten gefundenen "deleted" Slots
 
 		for (int i = 0; i < n; i++) {
 			int idx = probe(initialHash, i, p, n);
 
-			// Fall 1: Schlüssel bereits vorhanden
-			if (keys[idx] != null && keys[idx].equals(key)) {
-				if ("deleted".equals(vals[idx])) {
-					// Schlüssel existierte, war aber gelöscht. Wiederbeleben.
-					vals[idx] = val;
-					// Hier ist der kritische Punkt:
-					// Du erhöhst currentSize, dekrementierst deletedSize. Die Summe bleibt gleich.
-					// Wenn die Basisklasse dies als "Tabelle voll" interpretiert, ist das Problem dort.
+			// Fall 1: Slot ist leer (null)
+			if (keys[idx] == null) {
+				// Wenn wir einen zuvor gelöschten Slot gefunden haben, nutzen wir diesen bevorzugt
+				if (firstDeletedIdx != -1) {
+					keys[firstDeletedIdx] = key;
+					vals[firstDeletedIdx] = val;
 					try {
-						incrementCurrentSize();
-						decrementDeletedSize();
+						incrementCurrentSize();    // Erhöhe Anzahl der aktiven Elemente
+						decrementDeletedSize();    // Verringere Anzahl der gelöschten Markierungen
 					} catch (IllegalStateException e) {
-						// Dies sollte nicht passieren, wenn die Basisklasse korrekt ist.
-						// Wenn es doch passiert, bedeutet es, dass die Basisklasse die Logik nicht richtig unterstützt.
-						// Möglicherweise müssen wir den Wert zurücksetzen, um einen inkonsistenten Zustand zu vermeiden.
-						vals[idx] = "deleted"; // Rollback
-						throw new IllegalStateException("Failed to re-activate deleted entry due to base class restrictions.", e);
+						// Rollback: Wenn die Basisklasse einen Fehler wirft, müssen wir den Zustand wiederherstellen
+						keys[firstDeletedIdx] = null; // Den Slot wieder als leer markieren
+						// Optional: Den alten "deleted" Status wiederherstellen, falls er vorher gesetzt war.
+						// Da wir einen neuen Schlüssel einfügen wollten, war der Slot zuvor deleted.
+						vals[firstDeletedIdx] = "deleted"; // Oder null, je nach genauer Semantik des Rollbacks
+						throw new IllegalStateException("Failed to insert into deleted slot due to base class restrictions.", e);
 					}
 					return;
 				} else {
-					// Schlüssel existiert und ist aktiv – Wert überschreiben
+					// Kein gelöschter Slot gefunden, direkter Insert in leeren Slot
+					keys[idx] = key;
 					vals[idx] = val;
+					incrementCurrentSize();    // Erhöhe Anzahl der aktiven Elemente
 					return;
 				}
 			}
 
-			// Fall 2: Leerer Slot (null) gefunden
-			if (keys[idx] == null) {
-				if (firstDeletedIdx != -1) {
-					// Wir haben einen "deleted" Slot früher gefunden, verwenden wir diesen, um die Lücke zu füllen.
-					keys[firstDeletedIdx] = key;
-					vals[firstDeletedIdx] = val;
+			// Fall 2: Schlüssel bereits vorhanden
+			if (keys[idx].equals(key)) {
+				// Wenn der vorhandene Eintrag als "deleted" markiert war, reaktivieren wir ihn
+				if ("deleted".equals(vals[idx])) {
+					String oldVal = vals[idx]; // Sicherung des alten Werts für Rollback
+					vals[idx] = val; // Überschreibe "deleted" mit neuem Wert
 					try {
-						incrementCurrentSize();
-						decrementDeletedSize();
+						incrementCurrentSize();    // Erhöhe Anzahl der aktiven Elemente
+						decrementDeletedSize();    // Verringere Anzahl der gelöschten Markierungen
 					} catch (IllegalStateException e) {
-						keys[firstDeletedIdx] = null; // Rollback
-						vals[firstDeletedIdx] = "deleted"; // Muss wieder als deleted markiert werden
-						throw new IllegalStateException("Failed to use deleted slot for new entry due to base class restrictions.", e);
+						// Rollback: Wenn die Basisklasse einen Fehler wirft, müssen wir den Zustand wiederherstellen
+						vals[idx] = oldVal; // Wert zurücksetzen auf "deleted"
+						throw new IllegalStateException("Failed to re-activate deleted entry due to base class restrictions.", e);
 					}
 					return;
 				} else {
-					// Direkteinfügung in einen wirklich leeren Slot
-					if (getCurrentSize() + getDeletedSize() >= getMaxSize()) {
-						// Dies sollte nur dann auftreten, wenn der einzige freie Platz ein "deleted" Slot wäre,
-						// aber keiner gefunden wurde, oder die Tabelle logisch voll ist.
-						// Wenn du hier bist, und kein null-Slot gefunden wird, und kein firstDeletedIdx,
-						// dann ist die Tabelle wirklich voll.
-						throw new IllegalStateException("Hash table is full and no deleted slot found for reuse.");
-					}
-					keys[idx] = key;
+					// Schlüssel existiert und ist aktiv – Wert einfach aktualisieren
 					vals[idx] = val;
-					incrementCurrentSize(); // Diese Inkrementierung sollte nur fehlschlagen, wenn currentSize bereits maxSize ist.
 					return;
 				}
 			}
 
 			// Fall 3: Slot ist belegt, aber der Wert ist "deleted"
-			if ("deleted".equals(vals[idx])) {
-				if (firstDeletedIdx == -1) {
-					firstDeletedIdx = idx; // Merken wir uns den ersten "deleted" Slot
-				}
+			// Merken wir uns diesen Slot, falls wir später einen neuen Schlüssel einfügen müssen
+			if ("deleted".equals(vals[idx]) && firstDeletedIdx == -1) {
+				firstDeletedIdx = idx;
 			}
 		}
 
-		// Wenn der Loop beendet ist und wir einen "deleted" Slot gefunden haben (für einen NEUEN Schlüssel)
+		// Wenn die Schleife durchlaufen wurde und wir hier sind:
+		// Wenn wir einen "deleted" Slot gefunden haben, können wir diesen nutzen,
+		// um einen neuen Schlüssel einzufügen, wenn die Tabelle sonst voll wäre.
 		if (firstDeletedIdx != -1) {
 			keys[firstDeletedIdx] = key;
 			vals[firstDeletedIdx] = val;
@@ -121,7 +108,7 @@ public class Ab2Impl extends AbstractCustomProbingHashTable implements IMatrixSe
 			return;
 		}
 
-		// Wenn wir hier ankommen, ist die Tabelle wirklich voll
+		// Wenn wir hier ankommen, ist die Tabelle wirklich voll.
 		throw new IllegalStateException("Hash table is full");
 	}
 

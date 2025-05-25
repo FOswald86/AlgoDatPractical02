@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ab2.Ab2Tests" tests="12" skipped="0" failures="0" errors="0" timestamp="2025-05-25T12:32:53" hostname="DESKTOP-8I03H9R" time="0.026">
+<testsuite name="ab2.Ab2Tests" tests="12" skipped="0" failures="1" errors="0" timestamp="2025-05-25T12:53:41" hostname="DESKTOP-8I03H9R" time="0.03">
   <properties/>
   <testcase name="testDeletedSizeAndCurrentSizeTracking()" classname="ab2.Ab2Tests" time="0.014"/>
-  <testcase name="testFullTableCondition()" classname="ab2.Ab2Tests" time="0.003"/>
+  <testcase name="testFullTableCondition()" classname="ab2.Ab2Tests" time="0.006">
+    <failure message="java.lang.IllegalStateException: Failed to re-activate deleted entry due to base class restrictions." type="java.lang.IllegalStateException">java.lang.IllegalStateException: Failed to re-activate deleted entry due to base class restrictions.
+	at ab2.impl.Nachnamen.Ab2Impl.insert(Ab2Impl.java:77)
+	at ab2.Ab2Tests.testFullTableCondition(Ab2Tests.java:139)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: java.lang.IllegalStateException: Size exceeds maximum size
+	at ab2.AbstractCustomProbingHashTable.incrementCurrentSize(AbstractCustomProbingHashTable.java:223)
+	at ab2.impl.Nachnamen.Ab2Impl.insert(Ab2Impl.java:72)
+	... 4 more
+</failure>
+  </testcase>
   <testcase name="testOverwriteValue()" classname="ab2.Ab2Tests" time="0.001"/>
-  <testcase name="testInsertDeletedIsRejected()" classname="ab2.Ab2Tests" time="0.0"/>
-  <testcase name="testIsEmptyAndIsFull()" classname="ab2.Ab2Tests" time="0.0"/>
-  <testcase name="testInsertRemoveInsertSameKey()" classname="ab2.Ab2Tests" time="0.0"/>
-  <testcase name="testInsertCollisionHandling()" classname="ab2.Ab2Tests" time="0.0"/>
+  <testcase name="testInsertDeletedIsRejected()" classname="ab2.Ab2Tests" time="0.002"/>
+  <testcase name="testIsEmptyAndIsFull()" classname="ab2.Ab2Tests" time="0.001"/>
+  <testcase name="testInsertRemoveInsertSameKey()" classname="ab2.Ab2Tests" time="0.001"/>
+  <testcase name="testInsertCollisionHandling()" classname="ab2.Ab2Tests" time="0.001"/>
   <testcase name="testStairSearchMatrixA()" classname="ab2.Ab2Tests" time="0.0"/>
-  <testcase name="testDeletedSlotsAndReuse()" classname="ab2.Ab2Tests" time="0.001"/>
+  <testcase name="testDeletedSlotsAndReuse()" classname="ab2.Ab2Tests" time="0.0"/>
   <testcase name="testBinaryMatrixB()" classname="ab2.Ab2Tests" time="0.0"/>
   <testcase name="testInsertAndGetSimple()" classname="ab2.Ab2Tests" time="0.0"/>
   <testcase name="testRemoveThenInsertSameKey()" classname="ab2.Ab2Tests" time="0.001"/>
@@ -23,11 +35,6 @@ Breakpoint: Setting size to 1
 Breakpoint: Size incremented successfully. New size: 1
 CurrentSize before: 8
 DeletedSize before: 1
-Breakpoint: Setting size to 0
-Breakpoint: Size decremented successfully. New size: 0
-CurrentSize after: 9
-DeletedSize after: 0
-Wert fÃ¼r key 4: X
 Breakpoint: Setting size to 0
 Breakpoint: Size decremented successfully. New size: 0
 Breakpoint: Setting size to 1
