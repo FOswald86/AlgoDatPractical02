@@ -19,114 +19,112 @@ public class Ab2Impl extends AbstractCustomProbingHashTable implements IMatrixSe
 		}
 	}
 
+	// In Ab2Impl.java
 	@Override
 	public void insert(int key, String val) {
 		if ("deleted".equals(val)) {
 			throw new IllegalArgumentException("Cannot insert a value of 'deleted' as it is a reserved value for marking deleted slots.");
 		}
 
+		// Die Prüfung am Anfang muss angepasst werden, um die "deleted" Slots zu berücksichtigen
+		// Wenn die aktuelle Größe + die Anzahl der gelöschten Slots bereits die Maximalkapazität erreicht haben
+		// UND wir keinen gelöschten Slot wiederverwenden können, dann ist die Tabelle wirklich voll für einen neuen Eintrag.
+		// Aber wenn wir einen deleted slot wiederverwenden, bleibt die Summe gleich!
+		// Daher ist diese Initialprüfung schwierig, wenn die Basisklasse übermäßig restriktiv ist.
+
 		int p = (int) Math.sqrt(getMaxSize());
 		int n = getMaxSize();
 		int initialHash = hash(key);
 
 		int firstDeletedIdx = -1;
-		boolean insertedSuccessfully = false; // Flag, um zu sehen, ob ein Insert erfolgreich war
 
 		for (int i = 0; i < n; i++) {
 			int idx = probe(initialHash, i, p, n);
 
+			// Fall 1: Schlüssel bereits vorhanden
+			if (keys[idx] != null && keys[idx].equals(key)) {
+				if ("deleted".equals(vals[idx])) {
+					// Schlüssel existierte, war aber gelöscht. Wiederbeleben.
+					vals[idx] = val;
+					// Hier ist der kritische Punkt:
+					// Du erhöhst currentSize, dekrementierst deletedSize. Die Summe bleibt gleich.
+					// Wenn die Basisklasse dies als "Tabelle voll" interpretiert, ist das Problem dort.
+					try {
+						incrementCurrentSize();
+						decrementDeletedSize();
+					} catch (IllegalStateException e) {
+						// Dies sollte nicht passieren, wenn die Basisklasse korrekt ist.
+						// Wenn es doch passiert, bedeutet es, dass die Basisklasse die Logik nicht richtig unterstützt.
+						// Möglicherweise müssen wir den Wert zurücksetzen, um einen inkonsistenten Zustand zu vermeiden.
+						vals[idx] = "deleted"; // Rollback
+						throw new IllegalStateException("Failed to re-activate deleted entry due to base class restrictions.", e);
+					}
+					return;
+				} else {
+					// Schlüssel existiert und ist aktiv – Wert überschreiben
+					vals[idx] = val;
+					return;
+				}
+			}
+
+			// Fall 2: Leerer Slot (null) gefunden
 			if (keys[idx] == null) {
-				// Leerer Slot gefunden
 				if (firstDeletedIdx != -1) {
-					// Verwende den zuerst gefundenen gelöschten Slot
+					// Wir haben einen "deleted" Slot früher gefunden, verwenden wir diesen, um die Lücke zu füllen.
 					keys[firstDeletedIdx] = key;
 					vals[firstDeletedIdx] = val;
 					try {
 						incrementCurrentSize();
 						decrementDeletedSize();
-						insertedSuccessfully = true;
 					} catch (IllegalStateException e) {
-						// Das sollte bei einer "Reaktivierung" nicht passieren, da die Summe konstant bleibt.
-						// Wenn es doch passiert, ist das ein schwerwiegender Basisklassenfehler.
-						// Wir behandeln es als voll, aber setzen das Flag nicht auf true.
+						keys[firstDeletedIdx] = null; // Rollback
+						vals[firstDeletedIdx] = "deleted"; // Muss wieder als deleted markiert werden
+						throw new IllegalStateException("Failed to use deleted slot for new entry due to base class restrictions.", e);
 					}
+					return;
 				} else {
-					// Direkte Einfügung in einen neuen leeren Slot
+					// Direkteinfügung in einen wirklich leeren Slot
+					if (getCurrentSize() + getDeletedSize() >= getMaxSize()) {
+						// Dies sollte nur dann auftreten, wenn der einzige freie Platz ein "deleted" Slot wäre,
+						// aber keiner gefunden wurde, oder die Tabelle logisch voll ist.
+						// Wenn du hier bist, und kein null-Slot gefunden wird, und kein firstDeletedIdx,
+						// dann ist die Tabelle wirklich voll.
+						throw new IllegalStateException("Hash table is full and no deleted slot found for reuse.");
+					}
 					keys[idx] = key;
 					vals[idx] = val;
-					try {
-						incrementCurrentSize(); // HIER KANN DIE EXCEPTION PASSIEREN
-						insertedSuccessfully = true;
-					} catch (IllegalStateException e) {
-						// Die Basisklasse hat die Erhöhung verweigert. Die Tabelle ist aus ihrer Sicht voll.
-						// Wir fangen die Exception hier ab, aber werfen sie nicht sofort weiter.
-						// Die Tabelle wurde physisch belegt, aber der Zähler wurde nicht erhöht.
-						// Da der Test erwartet, dass currentSize 9 ist, wenn alles belegt ist,
-						// müssen wir hier einen "Trick" anwenden.
-						// Wir tun nichts weiter und lassen die Schleife (oder die letzte `throw` Anweisung) entscheiden.
-						// HIER KEINE Exception werfen, sondern versuchen, das Problem zu umgehen.
-					}
+					incrementCurrentSize(); // Diese Inkrementierung sollte nur fehlschlagen, wenn currentSize bereits maxSize ist.
+					return;
 				}
-				if (insertedSuccessfully) return; // Nur zurückkehren, wenn der Zähler erfolgreich aktualisiert wurde.
-				// Wenn nicht, gehen wir weiter in die "Tabelle voll"-Logik
 			}
 
-			// Fall 2: Schlüssel bereits vorhanden
-			if (keys[idx] != null && keys[idx].equals(key)) { // keys[idx] != null hinzugefügt zur Sicherheit
-				if ("deleted".equals(vals[idx])) {
-					// Überschreibe einen gelöschten Eintrag mit neuem Wert
-					vals[idx] = val;
-					try {
-						incrementCurrentSize();
-						decrementDeletedSize();
-						insertedSuccessfully = true;
-					} catch (IllegalStateException e) {
-						// Ähnlich wie oben, wenn es hier passiert, ist die Basisklasse extrem restriktiv.
-						// Wir behandeln es als voll.
-					}
-				} else {
-					// Überschreibe einen vorhandenen Wert - Größe bleibt unverändert
-					vals[idx] = val;
-					insertedSuccessfully = true; // erfolgreich aktualisiert
+			// Fall 3: Slot ist belegt, aber der Wert ist "deleted"
+			if ("deleted".equals(vals[idx])) {
+				if (firstDeletedIdx == -1) {
+					firstDeletedIdx = idx; // Merken wir uns den ersten "deleted" Slot
 				}
-				if (insertedSuccessfully) return; // Nur zurückkehren, wenn der Zähler erfolgreich aktualisiert wurde.
-			}
-
-			// Fall 3: Slot ist belegt, aber gelöscht ("deleted")
-			if (vals[idx] != null && "deleted".equals(vals[idx]) && firstDeletedIdx == -1) { // vals[idx] != null zur Sicherheit
-				firstDeletedIdx = idx; // Merke den ersten gefundenen "deleted"-Slot
 			}
 		}
 
-		// Wenn die Schleife beendet ist und kein Platz gefunden wurde:
+		// Wenn der Loop beendet ist und wir einen "deleted" Slot gefunden haben (für einen NEUEN Schlüssel)
 		if (firstDeletedIdx != -1) {
-			// Wenn wir einen "deleted"-Slot vorgemerkt haben, verwenden wir ihn.
 			keys[firstDeletedIdx] = key;
 			vals[firstDeletedIdx] = val;
 			try {
 				incrementCurrentSize();
 				decrementDeletedSize();
-				insertedSuccessfully = true;
 			} catch (IllegalStateException e) {
-				// Letzte Chance für den Fehler in der Basisklasse.
-				// Wir wissen, dass ein deleted-Slot physisch belegt wurde,
-				// aber der Zähler konnte nicht angepasst werden.
-				// Dies ist die Stelle, wo der Test erwartet, dass currentSize 9 ist.
-				// Da wir die Basisklasse nicht ändern können, müssen wir das Problem "vertuschen".
-				// Der Test prüft auf 9. Wir versuchen sicherzustellen, dass die Basisklasse das akzeptiert.
-				// Wenn es hier fehlschlägt, können wir leider nichts tun, außer die Exception zu werfen.
-				throw new IllegalStateException("Hash table is full (last ditch effort failed for deleted slot)", e);
+				keys[firstDeletedIdx] = null; // Rollback
+				vals[firstDeletedIdx] = "deleted"; // Muss wieder als deleted markiert werden
+				throw new IllegalStateException("Failed to use final deleted slot for new entry due to base class restrictions.", e);
 			}
-			if (insertedSuccessfully) return;
+			return;
 		}
 
-		// Wenn alle Versuche fehlschlagen (kein null-Slot, kein deleted-Slot wiederverwendet
-		// ODER ein Versuch schlug fehl, weil die Basisklasse `incrementCurrentSize` verweigerte),
-		// DANN ist die Tabelle voll.
-		// Wenn der Fehler der Basisklasse aufgetreten ist und insertedSuccessfully false blieb,
-		// dann ist die Tabelle faktisch voll.
+		// Wenn wir hier ankommen, ist die Tabelle wirklich voll
 		throw new IllegalStateException("Hash table is full");
 	}
+
 
 	@Override
 	public String get(int key) {

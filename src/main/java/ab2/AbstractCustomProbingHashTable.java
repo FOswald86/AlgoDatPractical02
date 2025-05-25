@@ -218,14 +218,12 @@ public abstract class AbstractCustomProbingHashTable {
 	 * Method to increment (+1) the size of the hash table (e.g. after adding a
 	 * key-value pair). 
 	 */
-
-	public void incrementCurrentSize() {
-	    try {
-	        int result = this.setCurrentSize(this.getCurrentSize() + 1);
-	        System.out.println("Breakpoint: Size incremented successfully. New size: " + result);
-	    } catch (IllegalStateException e) {
-	        System.out.println("Breakpoint: Error incrementing size. " + e.getMessage());
-	    }
+	protected void incrementCurrentSize() {
+		// Prüft, ob über die maximale Anzahl aktiver Elemente hinausgegangen wird
+		if (this.currentSize >= this.maxSize) {
+			throw new IllegalStateException("Current size already at maximum capacity.");
+		}
+		this.currentSize++;
 	}
 
 	

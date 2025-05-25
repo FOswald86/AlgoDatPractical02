@@ -132,12 +132,21 @@ public class Ab2Tests {
         hashTable.remove(4);
         assertEquals(8, hashTable.getCurrentSize());
         assertEquals(1, hashTable.getDeletedSize());
+        System.out.println("CurrentSize before: " + hashTable.getCurrentSize());
+        System.out.println("DeletedSize before: " + hashTable.getDeletedSize());
 
         // Insert another element, filling the deleted slot 
         hashTable.insert(4, "X");
+        System.out.println("CurrentSize after: " + hashTable.getCurrentSize());
+        System.out.println("DeletedSize after: " + hashTable.getDeletedSize());
+        System.out.println("Wert für key 4: " + hashTable.get(4));
+
         assertEquals(9, hashTable.getCurrentSize());
         assertEquals(0, hashTable.getDeletedSize());
-        
+        // System.out.println("currentSize = " + hashTable.getCurrentSize());
+        // 7System.out.println("deletedSize = " + hashTable.getDeletedSize());
+
+
         // Insert another element, filling the deleted slot 
         assertThrows(IllegalStateException.class, () -> hashTable.insert(10, "X"));
         

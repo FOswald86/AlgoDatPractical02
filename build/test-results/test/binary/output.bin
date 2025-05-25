@@ -1,163 +1,24 @@
 Breakpoint: Setting size to 1
-8Breakpoint: Size incremented successfully. New size: 1
-Breakpoint: Setting size to 2
-8Breakpoint: Size incremented successfully. New size: 2
-Breakpoint: Setting size to 1
 8Breakpoint: Size decremented successfully. New size: 1
 Breakpoint: Setting size to 1
 8Breakpoint: Size incremented successfully. New size: 1
-Breakpoint: Setting size to 1
-8Breakpoint: Size incremented successfully. New size: 1
-Breakpoint: Setting size to 2
-8Breakpoint: Size incremented successfully. New size: 2
-Breakpoint: Setting size to 3
-8Breakpoint: Size incremented successfully. New size: 3
-Breakpoint: Setting size to 4
-8Breakpoint: Size incremented successfully. New size: 4
-Breakpoint: Setting size to 5
-8Breakpoint: Size incremented successfully. New size: 5
-Breakpoint: Setting size to 6
-8Breakpoint: Size incremented successfully. New size: 6
-Breakpoint: Setting size to 7
-8Breakpoint: Size incremented successfully. New size: 7
-Breakpoint: Setting size to 8
-8Breakpoint: Size incremented successfully. New size: 8
-Breakpoint: Setting size to 9
-8Breakpoint: Size incremented successfully. New size: 9
 Breakpoint: Setting size to 8
 8Breakpoint: Size decremented successfully. New size: 8
 Breakpoint: Setting size to 1
 8Breakpoint: Size incremented successfully. New size: 1
-Breakpoint: Setting size to 9
-LBreakpoint: Error incrementing size. Breakpoint: Size exceeds maximum size
+CurrentSize before: 8
+DeletedSize before: 1
 Breakpoint: Setting size to 0
 8Breakpoint: Size decremented successfully. New size: 0
-Breakpoint: Setting size to 1
-8Breakpoint: Size incremented successfully. New size: 1
-Breakpoint: Setting size to 1
-8Breakpoint: Size incremented successfully. New size: 1
-Breakpoint: Setting size to 2
-8Breakpoint: Size incremented successfully. New size: 2
-Breakpoint: Setting size to 3
-8Breakpoint: Size incremented successfully. New size: 3
-Breakpoint: Setting size to 4
-8Breakpoint: Size incremented successfully. New size: 4
-Breakpoint: Setting size to 5
-8Breakpoint: Size incremented successfully. New size: 5
-Breakpoint: Setting size to 6
-8Breakpoint: Size incremented successfully. New size: 6
-Breakpoint: Setting size to 7
-8Breakpoint: Size incremented successfully. New size: 7
-Breakpoint: Setting size to 8
-8Breakpoint: Size incremented successfully. New size: 8
-Breakpoint: Setting size to 9
-8Breakpoint: Size incremented successfully. New size: 9
- Breakpoint: Setting size to 10
-9Breakpoint: Size incremented successfully. New size: 10
- Breakpoint: Setting size to 11
-9Breakpoint: Size incremented successfully. New size: 11
- Breakpoint: Setting size to 12
-9Breakpoint: Size incremented successfully. New size: 12
- Breakpoint: Setting size to 13
-9Breakpoint: Size incremented successfully. New size: 13
- Breakpoint: Setting size to 14
-9Breakpoint: Size incremented successfully. New size: 14
- Breakpoint: Setting size to 15
-9Breakpoint: Size incremented successfully. New size: 15
- Breakpoint: Setting size to 16
-9Breakpoint: Size incremented successfully. New size: 16
- Breakpoint: Setting size to 17
-9Breakpoint: Size incremented successfully. New size: 17
- Breakpoint: Setting size to 18
-9Breakpoint: Size incremented successfully. New size: 18
- Breakpoint: Setting size to 19
-9Breakpoint: Size incremented successfully. New size: 19
- Breakpoint: Setting size to 20
-9Breakpoint: Size incremented successfully. New size: 20
- Breakpoint: Setting size to 21
-9Breakpoint: Size incremented successfully. New size: 21
- Breakpoint: Setting size to 22
-9Breakpoint: Size incremented successfully. New size: 22
- Breakpoint: Setting size to 23
-9Breakpoint: Size incremented successfully. New size: 23
- Breakpoint: Setting size to 24
-9Breakpoint: Size incremented successfully. New size: 24
- Breakpoint: Setting size to 25
-9Breakpoint: Size incremented successfully. New size: 25
- Breakpoint: Setting size to 26
-9Breakpoint: Size incremented successfully. New size: 26
- Breakpoint: Setting size to 27
-9Breakpoint: Size incremented successfully. New size: 27
- Breakpoint: Setting size to 28
-9Breakpoint: Size incremented successfully. New size: 28
- Breakpoint: Setting size to 29
-9Breakpoint: Size incremented successfully. New size: 29
- Breakpoint: Setting size to 30
-9Breakpoint: Size incremented successfully. New size: 30
- Breakpoint: Setting size to 31
-9Breakpoint: Size incremented successfully. New size: 31
- Breakpoint: Setting size to 32
-9Breakpoint: Size incremented successfully. New size: 32
- Breakpoint: Setting size to 33
-9Breakpoint: Size incremented successfully. New size: 33
- Breakpoint: Setting size to 34
-9Breakpoint: Size incremented successfully. New size: 34
- Breakpoint: Setting size to 35
-9Breakpoint: Size incremented successfully. New size: 35
- Breakpoint: Setting size to 36
-9Breakpoint: Size incremented successfully. New size: 36
- Breakpoint: Setting size to 37
-9Breakpoint: Size incremented successfully. New size: 37
- Breakpoint: Setting size to 38
-9Breakpoint: Size incremented successfully. New size: 38
- Breakpoint: Setting size to 39
-9Breakpoint: Size incremented successfully. New size: 39
- Breakpoint: Setting size to 40
-9Breakpoint: Size incremented successfully. New size: 40
- Breakpoint: Setting size to 41
-9Breakpoint: Size incremented successfully. New size: 41
- Breakpoint: Setting size to 42
-9Breakpoint: Size incremented successfully. New size: 42
- Breakpoint: Setting size to 43
-9Breakpoint: Size incremented successfully. New size: 43
- Breakpoint: Setting size to 44
-9Breakpoint: Size incremented successfully. New size: 44
- Breakpoint: Setting size to 45
-9Breakpoint: Size incremented successfully. New size: 45
- Breakpoint: Setting size to 46
-9Breakpoint: Size incremented successfully. New size: 46
- Breakpoint: Setting size to 47
-9Breakpoint: Size incremented successfully. New size: 47
- Breakpoint: Setting size to 48
-9Breakpoint: Size incremented successfully. New size: 48
- Breakpoint: Setting size to 49
-9Breakpoint: Size incremented successfully. New size: 49
-Breakpoint: Setting size to 1
-8Breakpoint: Size incremented successfully. New size: 1
+CurrentSize after: 9
+DeletedSize after: 0
+Wert fÃ¼r key 4: X
 Breakpoint: Setting size to 0
 8Breakpoint: Size decremented successfully. New size: 0
 Breakpoint: Setting size to 1
 8Breakpoint: Size incremented successfully. New size: 1
-Breakpoint: Setting size to 1
-8Breakpoint: Size incremented successfully. New size: 1
 Breakpoint: Setting size to 0
 8Breakpoint: Size decremented successfully. New size: 0
-Breakpoint: Setting size to 1
-8Breakpoint: Size incremented successfully. New size: 1
-Breakpoint: Setting size to 2
-8Breakpoint: Size incremented successfully. New size: 2
-
-Breakpoint: Setting size to 1
-
-8Breakpoint: Size incremented successfully. New size: 1
-
-Breakpoint: Setting size to 2
-
-8Breakpoint: Size incremented successfully. New size: 2
-
-Breakpoint: Setting size to 3
-
-8Breakpoint: Size incremented successfully. New size: 3
 
 Breakpoint: Setting size to 2
 
@@ -174,22 +35,8 @@
 Breakpoint: Setting size to 2
 
 8Breakpoint: Size incremented successfully. New size: 2
-
-Breakpoint: Setting size to 2
-
-8Breakpoint: Size incremented successfully. New size: 2
-
-Breakpoint: Setting size to 3
-
-8Breakpoint: Size incremented successfully. New size: 3
-Breakpoint: Setting size to 1
-8Breakpoint: Size incremented successfully. New size: 1
-Breakpoint: Setting size to 1
-8Breakpoint: Size incremented successfully. New size: 1
 Breakpoint: Setting size to 0
 8Breakpoint: Size decremented successfully. New size: 0
-Breakpoint: Setting size to 1
-8Breakpoint: Size incremented successfully. New size: 1
 Breakpoint: Setting size to 1
 8Breakpoint: Size incremented successfully. New size: 1
 Breakpoint: Setting size to 0

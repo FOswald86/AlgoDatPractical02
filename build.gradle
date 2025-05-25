@@ -12,15 +12,13 @@ dependencies {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_21
-    targetCompatibility = JavaVersion.VERSION_21
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 test {
     useJUnitPlatform()
 }
-
-
 
 task zip(type: Zip) {
     archiveFileName = "solution.zip"
@@ -28,7 +26,6 @@ task zip(type: Zip) {
 
     from 'src/main/java/ab2/impl'
 }
-
 
 tasks.withType(JavaCompile) {
     options.compilerArgs += ['-Xlint:none']

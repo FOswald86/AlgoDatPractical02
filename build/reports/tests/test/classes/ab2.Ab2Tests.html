@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.062s</div>
+<div class="counter">0.020s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">91%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,37 +61,13 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
+<a href="#tab0">Tests</a>
 </li>
 <li>
-<a href="#tab1">Tests</a>
-</li>
-<li>
-<a href="#tab2">Standard output</a>
+<a href="#tab1">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="testFullTableCondition()"></a>
-<h3 class="failures">testFullTableCondition()</h3>
-<span class="code">
-<pre>org.opentest4j.AssertionFailedError: expected: &lt;9&gt; but was: &lt;8&gt;
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
-	at app//ab2.Ab2Tests.testFullTableCondition(Ab2Tests.java:138)
-	at java.base@21.0.6/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base@21.0.6/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base@21.0.6/java.util.ArrayList.forEach(ArrayList.java:1596)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -103,52 +79,52 @@
 </thead>
 <tr>
 <td class="success">testBinaryMatrixB()</td>
-<td class="success">0.001s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testDeletedSizeAndCurrentSizeTracking()</td>
-<td class="success">0.029s</td>
+<td class="success">0.014s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testDeletedSlotsAndReuse()</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">testFullTableCondition()</td>
-<td class="failures">0.013s</td>
-<td class="failures">failed</td>
+<td class="success">testFullTableCondition()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testInsertAndGetSimple()</td>
-<td class="success">0.001s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testInsertCollisionHandling()</td>
-<td class="success">0.001s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testInsertDeletedIsRejected()</td>
-<td class="success">0.002s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testInsertRemoveInsertSameKey()</td>
-<td class="success">0.002s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testIsEmptyAndIsFull()</td>
-<td class="success">0.007s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testOverwriteValue()</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -158,168 +134,35 @@
 </tr>
 <tr>
 <td class="success">testStairSearchMatrixA()</td>
-<td class="success">0.001s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab2" class="tab">
+<div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
 <pre>Breakpoint: Setting size to 1
-Breakpoint: Size incremented successfully. New size: 1
-Breakpoint: Setting size to 2
-Breakpoint: Size incremented successfully. New size: 2
-Breakpoint: Setting size to 1
 Breakpoint: Size decremented successfully. New size: 1
 Breakpoint: Setting size to 1
 Breakpoint: Size incremented successfully. New size: 1
-Breakpoint: Setting size to 1
-Breakpoint: Size incremented successfully. New size: 1
-Breakpoint: Setting size to 2
-Breakpoint: Size incremented successfully. New size: 2
-Breakpoint: Setting size to 3
-Breakpoint: Size incremented successfully. New size: 3
-Breakpoint: Setting size to 4
-Breakpoint: Size incremented successfully. New size: 4
-Breakpoint: Setting size to 5
-Breakpoint: Size incremented successfully. New size: 5
-Breakpoint: Setting size to 6
-Breakpoint: Size incremented successfully. New size: 6
-Breakpoint: Setting size to 7
-Breakpoint: Size incremented successfully. New size: 7
-Breakpoint: Setting size to 8
-Breakpoint: Size incremented successfully. New size: 8
-Breakpoint: Setting size to 9
-Breakpoint: Size incremented successfully. New size: 9
 Breakpoint: Setting size to 8
 Breakpoint: Size decremented successfully. New size: 8
 Breakpoint: Setting size to 1
 Breakpoint: Size incremented successfully. New size: 1
-Breakpoint: Setting size to 9
-Breakpoint: Error incrementing size. Breakpoint: Size exceeds maximum size
+CurrentSize before: 8
+DeletedSize before: 1
+Breakpoint: Setting size to 0
+Breakpoint: Size decremented successfully. New size: 0
+CurrentSize after: 9
+DeletedSize after: 0
+Wert fÃ¼r key 4: X
 Breakpoint: Setting size to 0
 Breakpoint: Size decremented successfully. New size: 0
 Breakpoint: Setting size to 1
 Breakpoint: Size incremented successfully. New size: 1
-Breakpoint: Setting size to 1
-Breakpoint: Size incremented successfully. New size: 1
-Breakpoint: Setting size to 2
-Breakpoint: Size incremented successfully. New size: 2
-Breakpoint: Setting size to 3
-Breakpoint: Size incremented successfully. New size: 3
-Breakpoint: Setting size to 4
-Breakpoint: Size incremented successfully. New size: 4
-Breakpoint: Setting size to 5
-Breakpoint: Size incremented successfully. New size: 5
-Breakpoint: Setting size to 6
-Breakpoint: Size incremented successfully. New size: 6
-Breakpoint: Setting size to 7
-Breakpoint: Size incremented successfully. New size: 7
-Breakpoint: Setting size to 8
-Breakpoint: Size incremented successfully. New size: 8
-Breakpoint: Setting size to 9
-Breakpoint: Size incremented successfully. New size: 9
-Breakpoint: Setting size to 10
-Breakpoint: Size incremented successfully. New size: 10
-Breakpoint: Setting size to 11
-Breakpoint: Size incremented successfully. New size: 11
-Breakpoint: Setting size to 12
-Breakpoint: Size incremented successfully. New size: 12
-Breakpoint: Setting size to 13
-Breakpoint: Size incremented successfully. New size: 13
-Breakpoint: Setting size to 14
-Breakpoint: Size incremented successfully. New size: 14
-Breakpoint: Setting size to 15
-Breakpoint: Size incremented successfully. New size: 15
-Breakpoint: Setting size to 16
-Breakpoint: Size incremented successfully. New size: 16
-Breakpoint: Setting size to 17
-Breakpoint: Size incremented successfully. New size: 17
-Breakpoint: Setting size to 18
-Breakpoint: Size incremented successfully. New size: 18
-Breakpoint: Setting size to 19
-Breakpoint: Size incremented successfully. New size: 19
-Breakpoint: Setting size to 20
-Breakpoint: Size incremented successfully. New size: 20
-Breakpoint: Setting size to 21
-Breakpoint: Size incremented successfully. New size: 21
-Breakpoint: Setting size to 22
-Breakpoint: Size incremented successfully. New size: 22
-Breakpoint: Setting size to 23
-Breakpoint: Size incremented successfully. New size: 23
-Breakpoint: Setting size to 24
-Breakpoint: Size incremented successfully. New size: 24
-Breakpoint: Setting size to 25
-Breakpoint: Size incremented successfully. New size: 25
-Breakpoint: Setting size to 26
-Breakpoint: Size incremented successfully. New size: 26
-Breakpoint: Setting size to 27
-Breakpoint: Size incremented successfully. New size: 27
-Breakpoint: Setting size to 28
-Breakpoint: Size incremented successfully. New size: 28
-Breakpoint: Setting size to 29
-Breakpoint: Size incremented successfully. New size: 29
-Breakpoint: Setting size to 30
-Breakpoint: Size incremented successfully. New size: 30
-Breakpoint: Setting size to 31
-Breakpoint: Size incremented successfully. New size: 31
-Breakpoint: Setting size to 32
-Breakpoint: Size incremented successfully. New size: 32
-Breakpoint: Setting size to 33
-Breakpoint: Size incremented successfully. New size: 33
-Breakpoint: Setting size to 34
-Breakpoint: Size incremented successfully. New size: 34
-Breakpoint: Setting size to 35
-Breakpoint: Size incremented successfully. New size: 35
-Breakpoint: Setting size to 36
-Breakpoint: Size incremented successfully. New size: 36
-Breakpoint: Setting size to 37
-Breakpoint: Size incremented successfully. New size: 37
-Breakpoint: Setting size to 38
-Breakpoint: Size incremented successfully. New size: 38
-Breakpoint: Setting size to 39
-Breakpoint: Size incremented successfully. New size: 39
-Breakpoint: Setting size to 40
-Breakpoint: Size incremented successfully. New size: 40
-Breakpoint: Setting size to 41
-Breakpoint: Size incremented successfully. New size: 41
-Breakpoint: Setting size to 42
-Breakpoint: Size incremented successfully. New size: 42
-Breakpoint: Setting size to 43
-Breakpoint: Size incremented successfully. New size: 43
-Breakpoint: Setting size to 44
-Breakpoint: Size incremented successfully. New size: 44
-Breakpoint: Setting size to 45
-Breakpoint: Size incremented successfully. New size: 45
-Breakpoint: Setting size to 46
-Breakpoint: Size incremented successfully. New size: 46
-Breakpoint: Setting size to 47
-Breakpoint: Size incremented successfully. New size: 47
-Breakpoint: Setting size to 48
-Breakpoint: Size incremented successfully. New size: 48
-Breakpoint: Setting size to 49
-Breakpoint: Size incremented successfully. New size: 49
-Breakpoint: Setting size to 1
-Breakpoint: Size incremented successfully. New size: 1
 Breakpoint: Setting size to 0
 Breakpoint: Size decremented successfully. New size: 0
-Breakpoint: Setting size to 1
-Breakpoint: Size incremented successfully. New size: 1
-Breakpoint: Setting size to 1
-Breakpoint: Size incremented successfully. New size: 1
-Breakpoint: Setting size to 0
-Breakpoint: Size decremented successfully. New size: 0
-Breakpoint: Setting size to 1
-Breakpoint: Size incremented successfully. New size: 1
-Breakpoint: Setting size to 2
-Breakpoint: Size incremented successfully. New size: 2
-Breakpoint: Setting size to 1
-Breakpoint: Size incremented successfully. New size: 1
-Breakpoint: Setting size to 2
-Breakpoint: Size incremented successfully. New size: 2
-Breakpoint: Setting size to 3
-Breakpoint: Size incremented successfully. New size: 3
 Breakpoint: Setting size to 2
 Breakpoint: Size decremented successfully. New size: 2
 Breakpoint: Setting size to 1
@@ -328,18 +171,8 @@ Breakpoint: Setting size to 1
 Breakpoint: Size decremented successfully. New size: 1
 Breakpoint: Setting size to 2
 Breakpoint: Size incremented successfully. New size: 2
-Breakpoint: Setting size to 2
-Breakpoint: Size incremented successfully. New size: 2
-Breakpoint: Setting size to 3
-Breakpoint: Size incremented successfully. New size: 3
-Breakpoint: Setting size to 1
-Breakpoint: Size incremented successfully. New size: 1
-Breakpoint: Setting size to 1
-Breakpoint: Size incremented successfully. New size: 1
 Breakpoint: Setting size to 0
 Breakpoint: Size decremented successfully. New size: 0
-Breakpoint: Setting size to 1
-Breakpoint: Size incremented successfully. New size: 1
 Breakpoint: Setting size to 1
 Breakpoint: Size incremented successfully. New size: 1
 Breakpoint: Setting size to 0
@@ -355,7 +188,7 @@ Breakpoint: Size decremented successfully. New size: 0
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.7</a> at 23.05.2025, 16:59:31</p>
+<a href="http://www.gradle.org">Gradle 8.7</a> at 25.05.2025, 14:32:53</p>
 </div>
 </div>
 </body>
